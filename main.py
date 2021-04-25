@@ -1,15 +1,8 @@
-#!/usr/bin/env python
-# pylint: disable=W0613, C0116
-# type: ignore[union-attr]
-
 import logging
 import json # for config
 import requests
-
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
-
-
 # Amazon Stuff
 from amazon.tools import get_asin # Get asin from url
 from utils.create_message import amazon_message # Create HTML template for amazon
@@ -37,7 +30,6 @@ def message_url(update: Update, context: CallbackContext) -> None:
                          'www.amazon.', 'amazon.']
 
     url = update.message.text
-
     domain = check_domain(update.message.text)
 
     if domain.startswith(tuple(amazon_valid_urls)):
@@ -47,9 +39,8 @@ def message_url(update: Update, context: CallbackContext) -> None:
 
         product = Product(get_asin(url))
         message = amazon_message(product)
-
         context.bot.send_message(update.message.chat_id, message[0] , reply_markup=message[1], parse_mode='HTML')
-
+        context.bot.delete_message(update.message.chat_id, update.message.message_id)
 
 
 def main():
