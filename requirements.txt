@@ -1,0 +1,4 @@
+python-amazon-paapi==3.3.2
+amightygirl.paapi5-python-sdk==1.0.0
+python-telegram-bot==13.4.1
+requests==2.25.1
