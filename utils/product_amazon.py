@@ -27,9 +27,6 @@ class Product():
     def get_image(self):
         return self.product.images.large
 
-    #def get_description(self):
-        #return self.product.raw_info.item_info.features.display_values[0]
-
     def get_info(self):
         return self.product.raw_info
 
