@@ -24,9 +24,19 @@ nohup python3 main.py &
 
 ### Customizing the message ✏️
 Now customizing is more easy, you can go to `utils/create_message.py` and edit the variable `message` to put in whatever you want
-
+![](https://telegra.ph/file/4d9dc08b6415986161fdd.png)
 ### Changelog
 ```
+Version 1.1.0
+  New features:
+      - Remove message from user when post is submitted successfully
+      - Added update object to utils/create_message to create more personalized message  
+  Updated:
+      - Updated regex top-domains
+
+  Other:
+      - Code cleaning
+      
 Version 1.0.0
   - Initial Release
 ```
@@ -36,4 +46,4 @@ Version 1.0.0
 * [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot)
 
 ## License  
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.MD](LICENSE.MD) file for details
