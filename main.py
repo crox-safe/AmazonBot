@@ -20,11 +20,11 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def start(update: Update, context: CallbackContext) -> None:
+def start(update, context):
     update.message.reply_text('Send me links from Amazon! I will give you back a nice post.')
 
 
-def message_url(update: Update, context: CallbackContext) -> None:
+def message_url(update, context):
 
     amazon_valid_urls = ['www.amzn.to', 'amzn.to',
                          'www.amazon.', 'amazon.']
