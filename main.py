@@ -38,7 +38,7 @@ def message_url(update, context):
             url = requests.get(url).url
 
         product = Product(get_asin(url))
-        message = amazon_message(product)
+        message = amazon_message(product, update)
         context.bot.send_message(update.message.chat_id, message[0] , reply_markup=message[1], parse_mode='HTML')
         context.bot.delete_message(update.message.chat_id, update.message.message_id)
 

@@ -1,24 +1,27 @@
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
-def amazon_message(product):
+def amazon_message(product, update):
 
-
-    message = ""
-
-    message += f"<a href='{product.get_image()}'>​​​​​​​​​​</a>\n"
-
-    message += f"📌{product.get_title()}\n\n"
+    first_name = update.message.from_user['first_name']
 
     if product.get_price().pvp.value != None:
-        message += f"💰Price: ❌{product.get_price().pvp.value} ✅{product.get_price().price.value}\n\n"
+        price = f"❌{product.get_price().pvp.value} ✅{product.get_price().price.value}"
 
     elif product.get_price().price.value != None:
-        message += f"💰Price: {product.get_price().price.value}\n\n"
+        price = f"{product.get_price().price.value}"
 
     else:
-        message += "💰Price: Not available\n\n"
+        price = "Not available"
 
-    message += f"🔗Link: <a href=\"{product.return_url()}\">Click Here</a>\n\n"
+    message = f"""<a href='{product.get_image()}'>​​​​​​​​​​</a>
+📌{product.get_title()}
+
+💰Price: {price}
+
+🔗Link: <a href=\"{product.return_url()}\">Click Here</a>
+
+🗣 Post by: {first_name}
+"""
 
     buttons = InlineKeyboardMarkup([[InlineKeyboardButton(text='🛒AMAZON🛒', url=product.return_url())]])
 

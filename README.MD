@@ -22,6 +22,9 @@ python3 main.py
 nohup python3 main.py &
 ```
 
+### Customizing the message ✏️
+Now customizing is more easy, you can go to `utils/create_message.py` and edit the variable `message` to put in whatever you want
+
 ### Changelog
 ```
 Version 1.0.0
