@@ -14,7 +14,7 @@ def amazon_message(product, update):
         price = "Not available"
 
     message = f"""<a href='{product.get_image()}'>​​​​​​​​​​</a>
-📌{product.get_title()}
+📌<b>{product.get_title()}</b>
 
 💰Price: {price}
 
