@@ -6,7 +6,7 @@
 * You need Python 3.6 or higher
 
 ```
-pip3 install -r requeriments.txt
+pip3 install -r requirements.txt
 ```
 
 ### Setup
