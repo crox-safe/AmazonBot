@@ -11,8 +11,8 @@ pip3 install -r requirements.txt
 
 ### Setup
 In order to setup the bot you need to copy `example_credentials.json` to `credentials.json` in `config/example_credentials.json`.
-Then add Bot Token (get it from [@BotFather](https://t.me/Botfather)) and Amazon configuration to the file `credentials.json`
-
+Then add Bot Token (get it from [@BotFather](https://t.me/Botfather)) and Amazon configuration to the file `credentials.json`.
+You need help configuring the bot? or maybe you want to host it? Find me out in telegram: [@xorgconfig](https://t.me/xorgconfig)
 ### Running
 ```
 #If you want just run the bot
@@ -28,6 +28,13 @@ Now customizing is more easy, you can go to `utils/create_message.py` and edit t
 ![](https://telegra.ph/file/4d9dc08b6415986161fdd.png)
 ### Changelog
 ```
+Version 1.2.0
+  New features:
+      - Show the percentage if the item is discounted
+  Updated: 
+      - python-amazon-paapi 3.3.2 --> 4.2.1
+      - Some functions were updated due to the module upgrade
+
 Version 1.1.0
   New features:
       - Remove message from user when post is submitted successfully

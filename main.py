@@ -4,7 +4,7 @@ import requests
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 # Amazon Stuff
-from amazon.tools import get_asin # Get asin from url
+from amazon_paapi import get_asin # Get asin from url
 from utils.create_message import amazon_message # Create HTML template for amazon
 from utils.product_amazon import Product
 from utils.tools import  check_domain
